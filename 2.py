@@ -15,7 +15,7 @@
 # сложность - O(1) - множество
 
 
-def numberOfMatches(n):
+def numberOfMatches(n: int):
     match = 0
     unplayed = 0
     while n >= 1:               # 1 команда побеждает 
