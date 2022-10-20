@@ -11,7 +11,7 @@
 # сложность - O(1) - множество
 
 class Solution(object):
-    def numberOfSteps(num):        #принимаем число int
+    def numberOfSteps(num: int):        #принимаем число int
         s = 0                           #добавляем шаг
         while num > 0:                  
             if num % 2: num -= 1        #если число нечетное (делится на 2 без остатка), вычетаем 1
