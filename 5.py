@@ -9,13 +9,13 @@ def removeOuterParentheses(s: str) -> str: # ф-ция принимает доп
         for ch in s:                             #  для каждой скобки в s:
             if ch == "(" :                       #  скобка открыта - движемся дальше
                 countOpen += 1
-                if countOpen > 1 :
-                    res += ch                    # добавляем к пустой строке "(" 
+            if countOpen > 0:
+                res += ch                    # добавляем к пустой строке "(" 
             
             if ch == ")" :                       # скобка закрыта - смотрим предыдущий символ
                 countOpen -= 1                   
-                if countOpen > 0 :               # также добавляем к строке символ ")"
-                    res += ch
+            if countOpen > 0 :               # также добавляем к строке символ ")"
+                res += ch
                   
         return res
 print(removeOuterParentheses("()"))
